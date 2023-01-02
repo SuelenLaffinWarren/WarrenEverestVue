@@ -40,33 +40,35 @@ export default {
     justify-items: flex-start;
     width: 370px;
     height: 400px;
-    margin-left: 50px;
+    margin-left: 100px;
+    border-radius: 15px;
 }
 
 #img-2 {
     justify-items: flex-start;
     width: 370px;
     height: 400px;
-    margin-right: 120px;
+    margin-right: 150px;
+    border-radius: 15px;
 
 }
 
 #h4-1 {
     text-align: start;
-    margin-right: 400px;
-    margin-left: 120px;
+    margin-right: 150px;
+    margin-left: 300px;
     font-family: serif;
     color: black;
-    font-weight: 100;
+    font-weight: bold;
 }
 
 #h4-2 {
-    text-align: star;
-    margin-right: 400px;
+    text-align: start;
+    margin-right: 300px;
     margin-left: 100px;
     font-family: serif;
     color: black;
-    font-weight: 100;
+    font-weight: bold;
 }
 
 div {

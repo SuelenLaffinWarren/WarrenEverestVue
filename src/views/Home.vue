@@ -27,5 +27,7 @@ export default {
 <style scoped>
 div {
   display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 </style>

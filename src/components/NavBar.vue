@@ -1,20 +1,33 @@
 <template>
     <div id="menu">
         <ul>
-            <li id="menu-warren"><img src="/img/logoWarren.png" alt="">warren</li>
-            <li id="menu1">Menu1</li>
-            <li id="menu2">Menu2
-                <ul id="submenu">
-                    <li>Teste</li>
-                    <li>Teste</li>
-                    <li>Teste</li>
-                </ul>
-            </li>
-            <li id="menu3">Menu3</li>
-            <li id="menu4">Menu4</li>
-            <li id="menu5">Menu5</li>
+            <li id="li-image"><img src="/img/logo-black.png" alt="" id="logo"></li>
 
-            <button id="btn">BUTTON</button>
+            <li id="menu2">
+                <div id="div-submenu">
+                    <select id="submenu">
+                        <option hidden selected>Investir</option>
+                        <option>Carteiras</option>
+                        <option>Bolsa</option>
+                        <option>Home Broker</option>
+                    </select>
+                </div>
+            </li>
+            <li id="menu1">Quanto custa</li>
+            <li id="menu3">Sobre</li>
+            <li id="menu4">Aprender</li>
+            <li id="menu5">
+                <div id="div-submenu">
+                    <select id="submenu">
+                        <option hidden selected>Ferramentas</option>
+                        <option>Análise de Ativos</option>
+                        <option>Comparador</option>
+                    </select>
+                </div>
+            </li>
+
+            <button id="btn-login">Login</button>
+            <button id="btn-openAccount">Abra sua conta</button>
         </ul>
     </div>
 
@@ -34,12 +47,30 @@ export default {
 
 <style scoped>
 #menu {
-    background-color: rgb(200, 198, 198);
+    background-color: white;
     border: none;
     padding: 8px;
-    margin-top: 10px;
-    width: 100%;
+    margin: 15px;
     height: 40px;
+    display: flex;
+}
+
+#submenu {
+    /* -moz-appearance: none; */
+    /* -webkit-appearance: none; */
+    border: none;
+    background-color: transparent;
+    color: black;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+option {
+    color: black;
 }
 
 #menu ul {
@@ -47,29 +78,19 @@ export default {
 }
 
 #menu ul li:hover {
-    background-color: rgb(155, 152, 152);
+    background-color: rgb(239, 234, 234);
+    border-radius: 10px;
 }
 
 #menu ul li {
     display: inline-block;
     justify-content: space-between;
     width: 130px;
-    color: white;
+    color: black;
     line-height: 40px;
     float: left;
     text-align: center;
-}
-
-#menu1,
-#menu2,
-#menu3,
-#menu4,
-#menu5 {
     font-size: 13px;
-}
-
-#menu-warren {
-    font-size: 15px;
     font-weight: bold;
 }
 
@@ -93,13 +114,30 @@ li {
     list-style-type: none;
 }
 
-#btn {
+button {
+    margin: 0 15px;
+    font-weight: bold;
+
+}
+
+#btn-login {
     background-color: black;
     color: white;
-    border-radius: 15px;
+    border-radius: 18px;
     font-size: 12px;
-    width: 80px;
-    height: 30px;
+    width: 90px;
+    height: 35px;
+    border: none;
+}
+
+#btn-openAccount {
+    background-color: black;
+    color: white;
+    border-radius: 18px;
+    font-size: 12px;
+    width: 120px;
+    height: 35px;
+
 }
 
 #text {
@@ -108,10 +146,9 @@ li {
 }
 
 img {
-    width: 20px;
-    height: 20px;
+    width: 100px;
+    height: 40px;
     margin-left: 15px;
-
-
+    background: transparent;
 }
 </style>

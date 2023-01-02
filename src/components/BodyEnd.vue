@@ -5,7 +5,7 @@
 
             <p>COMEÇE A INSVESTIR EM POUCOS MINUTOS, DESCOMPLIQUE.</p>
         </div>
-        <button>BUTTON</button>
+        <button>ABRA SUA CONTA</button>
 
     </div>
 </template>
@@ -19,16 +19,17 @@ export default {
 <style scoped>
 #body-end {
     height: 180px;
-    background-color: rgb(196, 192, 192);
+    background-color: rgb(120, 118, 118);
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: 80%;
     list-style: none;
     margin-left: auto;
     margin-right: auto;
-    padding: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 h2 {
@@ -43,9 +44,9 @@ ul {
 button {
     background-color: black;
     color: white;
-    border-radius: 25px;
+    border-radius: 15px;
     font-size: 12px;
-    width: 100px;
+    width: 160px;
     height: 50px;
     margin-bottom: 5px;
     margin-left: 35px;

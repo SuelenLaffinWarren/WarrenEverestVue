@@ -1,5 +1,5 @@
 <template>
-    <div id="main-banner">
+    <div id="main-banner" :style="image">
         <div>
             <form action="">
                 <div>
@@ -13,11 +13,7 @@
                     <button id="btn">BUTTON</button>
                 </div>
             </form>
-
         </div>
-
-
-
     </div>
 </template>
 
@@ -26,7 +22,7 @@ export default {
     name: "Banner",
     data() {
         return {
-
+            image: { backgroundImage: 'url(/img/fundo-banner2.jpg)' }
         }
     }
 }
@@ -40,7 +36,11 @@ export default {
     height: 350px;
     display: flex;
     align-items: center;
-
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
 
 }
 
@@ -77,8 +77,9 @@ p {
 }
 
 button {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
+    border: none;
     border-radius: 15px;
     font-size: 12px;
     width: 80px;

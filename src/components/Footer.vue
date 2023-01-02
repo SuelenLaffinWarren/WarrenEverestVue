@@ -49,9 +49,8 @@ export default {
 <style scoped>
 #footer {
     height: 200px;
-    background-color: rgb(90, 88, 88);
-    border-top: 2px solid black;
-    color: white;
+    background-color: rgb(225, 220, 220);
+    color: black;
     display: flex;
     align-items: center;
     justify-content: space-around;
