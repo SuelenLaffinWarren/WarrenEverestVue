@@ -58,11 +58,10 @@ export default {
     border: none;
     background-color: transparent;
     color: black;
-    width: 100px;
+    width: 110px;
     height: 20px;
     text-align: center;
     border: none;
-    font-size: 13px;
     font-weight: bold;
 }
 
@@ -87,7 +86,7 @@ option {
     line-height: 40px;
     float: left;
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
 }
 

@@ -10,7 +10,8 @@ export default {}
 
 <style>
 #app {
-  margin: 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   padding: 0;
+  margin: 0;
 }
 </style>
