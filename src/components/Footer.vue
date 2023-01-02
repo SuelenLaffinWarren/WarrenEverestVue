@@ -24,7 +24,7 @@
                 <li class="col-md-2 col-sm-4">Por onde começar?</li>
                 <li class="list-inline-item">Nossos cursos</li>
                 <li class="list-inline-item">Dicas financeiras</li>
-
+                <li class="list-inline-item">Warren Edu</li>
             </ul>
         </div>
         <div>
@@ -56,11 +56,11 @@ export default {
     justify-content: space-evenly;
     width: 100%;
     list-style: none;
-    padding: 0px;
-
+    padding: 0;
 }
 
 ul {
+    padding-right: 35px;
     list-style-type: none;
 }
 

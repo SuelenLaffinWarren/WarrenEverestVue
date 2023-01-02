@@ -24,12 +24,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 80%;
+    width: 100%;
     list-style: none;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 h2 {
