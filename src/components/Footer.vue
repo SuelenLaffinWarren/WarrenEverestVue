@@ -53,12 +53,10 @@ export default {
     color: black;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     list-style: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding: auto;
+    padding: 0px;
 
 }
 
