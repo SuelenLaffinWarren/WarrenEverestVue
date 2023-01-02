@@ -1,27 +1,16 @@
 <template>
   <div id="app">
-    <NavBar />
     <router-view />
-    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue';
-import Footer from './components/Footer.vue';
-
-export default {
-  components: {
-    NavBar,
-    Footer
-  }
-}
+export default {}
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 </style>

@@ -2,7 +2,6 @@
     <div id="menu">
         <ul>
             <li id="li-image"><img src="/img/logo-black.png" alt="" id="logo"></li>
-
             <li id="menu2">
                 <div id="div-submenu">
                     <select id="submenu">
@@ -25,7 +24,6 @@
                     </select>
                 </div>
             </li>
-
             <button id="btn-login">Login</button>
             <button id="btn-openAccount">Abra sua conta</button>
         </ul>
@@ -53,11 +51,10 @@ export default {
     margin: 15px;
     height: 40px;
     display: flex;
+    justify-content: space-around;
 }
 
 #submenu {
-    /* -moz-appearance: none; */
-    /* -webkit-appearance: none; */
     border: none;
     background-color: transparent;
     color: black;
@@ -137,7 +134,7 @@ button {
     font-size: 12px;
     width: 120px;
     height: 35px;
-
+    border: none;
 }
 
 #text {
