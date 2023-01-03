@@ -1,18 +1,17 @@
 <template>
     <div id="main-banner" :style="image">
         <div>
-            <form action="">
-                <div>
-                    <h2 id="h2-banner">Invista em viver.
-                    </h2>
-                </div>
-                <div>
-                    <p>Investir toma tempo, mas não precisa ser o seu. Conte com nossos especialistas.</p>
-                </div>
-                <div>
-                    <button id="btn">Comece agora</button>
-                </div>
-            </form>
+            <div>
+                <h2 id="h2-banner">Invista em viver.
+                </h2>
+            </div>
+            <div>
+                <p>Investir toma tempo, mas não precisa ser o seu. Conte com nossos especialistas.</p>
+            </div>
+            <div>
+                <button id="btn">Comece agora</button>
+            </div>
+
         </div>
     </div>
 </template>

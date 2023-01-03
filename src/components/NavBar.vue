@@ -34,7 +34,6 @@
 <script>
 export default {
     name: "NavBar",
-    props: ["logo", "alt"],
     data() {
         return {
             image: 'url(/img/logoWarren.png)'
