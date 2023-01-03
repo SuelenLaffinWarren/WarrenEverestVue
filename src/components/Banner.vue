@@ -37,11 +37,6 @@ export default {
     display: flex;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    border-radius: 10px;
-
 }
 
 #h2-banner {
