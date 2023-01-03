@@ -28,8 +28,6 @@ export default {
     list-style: none;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
-    border-radius: 5px;
 }
 
 h2 {
