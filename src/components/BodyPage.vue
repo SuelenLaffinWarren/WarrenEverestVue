@@ -51,6 +51,7 @@ export default {
 <style scoped>
 hr {
     background-color: rgb(244, 8, 122);
+    margin: 10px;
 }
 
 button {
@@ -62,6 +63,7 @@ button {
     width: 150px;
     height: 40px;
     font-weight: bold;
+    margin: 15px;
 
 }
 
@@ -122,5 +124,9 @@ div {
     margin-top: 20px;
     display: flex;
     margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
 }
 </style>
