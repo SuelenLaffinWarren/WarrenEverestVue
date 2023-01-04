@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import NavBar from '../components/NavBar.vue';
-import Footer from '../components/Footer.vue';
-import Banner from '../components/Banner.vue';
-import BodyEnd from '../components/BodyEnd.vue'
-import BodyPage from '../components/BodyPage.vue'
+import NavBar from '../components/Home/NavBar.vue';
+import Footer from '../components/Home/Footer.vue';
+import Banner from '../components/Home/Banner.vue';
+import BodyEnd from '../components/Home/BodyEnd.vue'
+import BodyPage from '../components/Home/BodyPage.vue'
 export default {
   name: 'Home',
   components: {
