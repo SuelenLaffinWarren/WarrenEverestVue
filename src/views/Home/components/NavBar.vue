@@ -25,7 +25,7 @@
                 </div>
             </li>
             <button id="btn-login">Login</button>
-            <router-link to="/register"><button id="btn-openAccount">Abra sua conta</button></router-link>
+            <router-link to="/personalData"><button id="btn-openAccount">Abra sua conta</button></router-link>
         </ul>
     </div>
 
