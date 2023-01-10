@@ -1,11 +1,11 @@
 <template>
     <main>
         <NavBarForm />
-        <section style="display: flex;">
-            <div id="center" style="width: 65%; border: 3px solid red;">
+        <section>
+            <div id="center">
                 <slot name="Center" />
             </div>
-            <img :src="imageForm" style="" />
+            <img :src="imageForm" style="width: 500px" />
         </section>
     </main>
 </template>
@@ -26,5 +26,11 @@ export default {
 </script>
 
 <style scoped>
+section {
+    display: flex;
+}
 
+#center {
+    width: 100%;
+}
 </style>

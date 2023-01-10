@@ -19,6 +19,24 @@ const routes = [
         /* webpackChunkName: "register" */ "../views/PersonalData/PersonalData.vue"
       ),
   },
+  {
+    path: "/contactData",
+    name: "contactData",
+
+    component: () =>
+      import(
+        /* webpackChunkName: "register" */ "../views/ContactData/ContactData.vue"
+      ),
+  },
+  {
+    path: "/conclusionData",
+    name: "conclusionData",
+
+    component: () =>
+      import(
+        /* webpackChunkName: "register" */ "../views/ConclusionData/ConclusionData.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
