@@ -5,7 +5,7 @@
             <div id="center">
                 <slot name="Center" />
             </div>
-            <img :src="imageForm" style="width: 500px" />
+            <img :src="imageForm" style="width: auto;height: calc(100vh - 30px);" />
         </section>
     </main>
 </template>
@@ -19,7 +19,7 @@ export default {
     },
     data() {
         return {
-            imageForm: "/img/form-people2-removebg.png"
+            imageForm: "/img/image-card.png"
         }
     }
 }

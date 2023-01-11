@@ -8,39 +8,45 @@
           <div class="progressbar">
             <div class="progress" id="progress"></div>
 
-            <div class="progress-step" data-title="Dados Pessoais"></div>
-            <div class="progress-step progress-step-active" data-title="Dados de Endereço"></div>
-            <div class="progress-step" data-title="Conclusão"></div>
+            <div class="progress-step progress-step-active"></div>
+            <div class="progress-step progress-step-active"></div>
+            <div class="progress-step"></div>
 
           </div>
 
           <!-- Steps -->
-          <div class="form-step form-step-active">
-            <div class="input-group">
+
+          <section style="display: flex; width: 100%;">
+            <div class="input-group" style="width: 50%">
               <label for="name">País</label>
               <input type="text" name="país" id="país" placeholder="" />
             </div>
-            <div class="input-group">
+            <div class="input-group" style="width: 50%">
               <label for="estado">Estado</label>
               <input type="text" name="estado" id="estado" placeholder="" />
             </div>
-            <div class="input-group">
+          </section>
+          <section style="display: flex; width: 100%;">
+            <div class="input-group" style="width: 50%">
               <label for="cidade">Cidade</label>
               <input type="text" name="cidade" id="cidade" placeholder="" />
             </div>
-            <div class="input-group">
+            <div class="input-group" style="width: 50%">
               <label for="rua">Rua</label>
               <input type="text" name="rua" id="rua" placeholder="" />
             </div>
-            <div class="input-group">
+          </section>
+          <section style="display: flex; width: 100%;">
+            <div class="input-group" style="width: 100%">
               <label for="cep">CEP</label>
-              <input type="text" name="cep" id="telefone" placeholder="" />
+              <input type="text" name="cep" id="telefone" placeholder="" style="width: 88%" />
             </div>
-            <div class="">
-              <router-link to="/personalData"><button class="btn" id="btn-back"> Voltar</button></router-link>
-              <router-link to="/conclusionData"><button class="btn" id="btn-confirm"> Confirmar</button></router-link>
-            </div>
+          </section>
+          <div class="">
+            <router-link to="/personalData"><button class="btn" id="btn-back"> Voltar</button></router-link>
+            <router-link to="/conclusionData"><button class="btn" id="btn-confirm"> Confirmar</button></router-link>
           </div>
+
         </form>
       </div>
     </template>
@@ -62,14 +68,12 @@ export default {
 </script>
 
 <style scoped>
-div {
-  display: flex;
-}
-
 label {
   width: 20%;
   display: flex;
   margin-bottom: 0.5rem;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .checkbox-container {
@@ -81,8 +85,6 @@ span {
 }
 
 input {
-  display: flex;
-  width: 80%;
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
@@ -105,8 +107,7 @@ input {
   position: relative;
   display: flex;
   justify-content: space-between;
-  counter-reset: step;
-  margin: 2rem 0 4rem;
+  margin: 1rem 0 2rem;
 }
 
 .progressbar::before,
@@ -115,9 +116,9 @@ input {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 4px;
+  height: 1px;
   width: 100%;
-  background-color: #dcdcdc;
+  background-color: rgba(224, 43, 87, 1);
   z-index: -1;
 }
 
@@ -128,18 +129,18 @@ input {
 }
 
 .progress-step {
-  width: 2.1875rem;
-  height: 2.1875rem;
-  background-color: #dcdcdc;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #f5f3f3;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgba(224, 43, 87, 1);
 }
 
-.progress-step::before {
-  counter-increment: step;
-  content: counter(step);
+.progress-step-before {
+  background-color: rgba(224, 43, 87, 1);
 }
 
 .progress-step::after {
@@ -151,27 +152,20 @@ input {
 }
 
 .progress-step-active {
-  background-color: rgb(131, 235, 131);
-  color: black;
+  background-color: rgba(224, 43, 87, 1);
 }
 
 /* Form */
 .form {
   width: clamp(420px, 100%, 400px);
   margin: 0 auto;
-  border: 2px solid #ccc;
   border-radius: 0.35rem;
   padding: 1.5rem;
 }
 
 .form-step {
-  display: none;
   transform-origin: top;
   animation: animate 0.5s;
-}
-
-.form-step-active {
-  display: block;
 }
 
 .input-group {
@@ -200,6 +194,7 @@ input {
 }
 
 .btn {
+  margin-top: 10px;
   border: none;
   width: 100px;
   padding: 0.6rem;
@@ -215,7 +210,7 @@ input {
 }
 
 #btn-confirm {
-  margin-left: 220px;
+  margin-left: 195px;
 }
 
 .btn:hover {

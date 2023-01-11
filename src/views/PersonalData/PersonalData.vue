@@ -8,59 +8,79 @@
           <div class="progressbar">
             <div class="progress" id="progress"></div>
 
-            <div class="progress-step progress-step-active" data-title="Dados Pessoais"></div>
-            <div class="progress-step" data-title="Dados de Endereço"></div>
-            <div class="progress-step" data-title="Conclusão"></div>
+            <div class="progress-step progress-step-active"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
 
           </div>
 
           <!-- Steps -->
-          <div class="form-step form-step-active">
-            <div class="input-group">
+          <section style="display: flex; width: 100%;">
+            <div class="input-group" style="width:100%">
               <label for="name">Nome Completo</label>
-              <input type="text" name="name" id="name" placeholder="Digite seu nome" />
+              <input type="text" name="name" id="name" placeholder="Digite seu nome" style="width: 88%" />
             </div>
-            <div class="input-group">
+          </section>
+          <section style="display: flex; width: 100%;">
+            <div class="input-group" style="width: 50%">
               <label for="email">Email</label>
               <input type="text" name="email" id="email" placeholder="Digite seu email" />
             </div>
-
-            <div class="input-group">
+            <div class="input-group" style="width: 50%">
+              <label for="email">Confirmar Email</label>
+              <input type="text" name="email" id="email" placeholder="Digite seu email" />
+            </div>
+          </section>
+          <section style="display: flex; width: 100%">
+            <div class="input-group" style="width: 50%">
               <label for="cpf">CPF</label>
               <input type="text" name="cpf" id="cpf" placeholder="___.___.___-__ " />
             </div>
-            <div class="input-group">
+            <div class="input-group" style="width: 50%">
               <label for="telefone">Telefone</label>
               <input type="text" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" />
             </div>
-            <div class="input-group">
+          </section>
+          <section style="display: flex; width: 100%">
+            <div class="input-group" style="width: 100%">
               <label for="dataNasc">Data de Nascimento</label>
               <input type="date" id="dataNasc" name="dataNasc">
             </div>
-            <div class="input-group">
+          </section>
+
+          <section style="display: flex;width: 100%">
+            <div style="width: 100%">
+              <label for="opcionais" id="opcionais-title">Ao finalizar, confira se os dados estão corretos</label>
               <label for="opcionais" id="opcionais-title">Gostaria de receber novidades por:</label>
-
-              <div class="checkbox-container">
-                <input type="checkbox" name="opcionais" id="opcionais" v-model="opcionais" value="Email">
-                <span>Email</span>
-              </div>
-
-              <div class="checkbox-container">
-                <input type="checkbox" name="opcionais" id="opcionais" v-model="opcionais" value="Whatsapp">
-                <span>Whatsapp</span>
-              </div>
             </div>
-            <div class="">
-              <router-link to="/contactData"><button class="btn"> Confirmar</button></router-link>
+          </section>
+          <section style="display: flex;width: 100%">
+            <div class="checkbox-container" style="width:100%">
+              <input type="checkbox" name="opcionais" id="opcionais" v-model="opcionais" value="Email">
+              <span>Email</span>
             </div>
+          </section>
+
+          <section style="display: flex;width: 100%">
+            <div class="checkbox-container" style="width: 100%">
+              <input type="checkbox" name="opcionais" id="opcionais" v-model="opcionais" value="Whatsapp">
+              <span>Whatsapp</span>
+            </div>
+          </section>
+          <br>
+          <section>
+            <div>
+              <h6>Ao prosseguir você concorda com todos os nossos termos e condições.</h6>
+            </div>
+          </section>
+          <br>
+          <div class="">
+            <router-link to="/contactData"><button class="btn"> Confirmar</button></router-link>
           </div>
         </form>
       </div>
-
     </template>
-
   </SlotForm>
-
 </template>
 
 <script>
@@ -75,18 +95,22 @@ export default {
 </script>
 
 <style scoped>
-div {
+section {
   display: flex;
+  width: 100%;
 }
 
 label {
-  width: 50%;
+  width: 80%;
   display: flex;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .checkbox-container {
-  margin: auto;
+  margin: 3px;
+  font-size: 10px;
 }
 
 span {
@@ -94,9 +118,7 @@ span {
 }
 
 input {
-  display: flex;
-  width: 90%;
-  padding: 0.75rem;
+  padding: 0.7rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
 }
@@ -118,8 +140,7 @@ input {
   position: relative;
   display: flex;
   justify-content: space-between;
-  counter-reset: step;
-  margin: 2rem 0 4rem;
+  margin: 1rem 0 2rem;
 }
 
 .progressbar::before,
@@ -128,9 +149,9 @@ input {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 4px;
+  height: 1px;
   width: 100%;
-  background-color: #dcdcdc;
+  background-color: rgba(224, 43, 87, 1);
   z-index: -1;
 }
 
@@ -141,38 +162,25 @@ input {
 }
 
 .progress-step {
-  width: 2.1875rem;
-  height: 2.1875rem;
-  background-color: #dcdcdc;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #f5f3f3;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.progress-step::before {
-  counter-increment: step;
-  content: counter(step);
-}
-
-.progress-step::after {
-  content: attr(data-title);
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  font-size: 10px;
-  color: #666;
+  border: 1px solid rgba(224, 43, 87, 1);
 }
 
 .progress-step-active {
-  background-color: rgb(131, 235, 131);
-  color: black;
+  background-color: rgba(224, 43, 87, 1);
+
 }
 
 /* Form */
 .form {
   width: clamp(420px, 100%, 400px);
   margin: 0 auto;
-  border: 2px solid #ccc;
   border-radius: 0.35rem;
   padding: 1.5rem;
 }
@@ -183,13 +191,9 @@ input {
   animation: animate 0.5s;
 }
 
-.form-step-active {
-  display: block;
-}
-
 .input-group {
-  margin: 10px 0;
-  font-size: 13px;
+  margin: 7px 0;
+  font-size: 11px;
   font-weight: bold;
 }
 
@@ -216,7 +220,7 @@ input {
   border: none;
   width: 100px;
   padding: 0.6rem;
-  margin-left: 320px;
+  margin-left: 300px;
   display: inline;
   background-color: rgba(224, 43, 87, 1);
   color: white;

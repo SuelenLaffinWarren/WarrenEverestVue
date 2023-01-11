@@ -8,9 +8,9 @@
           <div class="progressbar">
             <div class="progress" id="progress"></div>
 
-            <div class="progress-step" data-title="Dados Pessoais"></div>
-            <div class="progress-step" data-title="Dados de Endereço"></div>
-            <div class="progress-step progress-step-active" data-title="Conclusão"></div>
+            <div class="progress-step progress-step-active"></div>
+            <div class="progress-step progress-step-active"></div>
+            <div class="progress-step progress-step-active"></div>
 
           </div>
 
@@ -48,10 +48,6 @@ export default {
 </script>
 
 <style scoped>
-.div {
-  display: flex;
-}
-
 img {
   margin-top: 4px;
   width: 80px;
@@ -86,8 +82,7 @@ h5 {
   position: relative;
   display: flex;
   justify-content: space-between;
-  counter-reset: step;
-  margin: 2rem 0 4rem;
+  margin: 1rem 0 2rem;
 }
 
 .progressbar::before,
@@ -96,9 +91,9 @@ h5 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 4px;
+  height: 1px;
   width: 100%;
-  background-color: #dcdcdc;
+  background-color: rgba(224, 43, 87, 1);
   z-index: -1;
 }
 
@@ -109,38 +104,24 @@ h5 {
 }
 
 .progress-step {
-  width: 2.1875rem;
-  height: 2.1875rem;
-  background-color: #dcdcdc;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #f5f3f3;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.progress-step::before {
-  counter-increment: step;
-  content: counter(step);
-}
-
-.progress-step::after {
-  content: attr(data-title);
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  font-size: 10px;
-  color: #666;
+  border: 1px solid rgba(224, 43, 87, 1);
 }
 
 .progress-step-active {
-  background-color: rgb(131, 235, 131);
-  color: black;
+  background-color: rgba(224, 43, 87, 1);
 }
 
 /* Form */
 .form {
   width: clamp(420px, 100%, 400px);
   margin: 0 auto;
-  border: 2px solid #ccc;
   border-radius: 0.35rem;
   padding: 1.5rem;
 }
@@ -184,7 +165,7 @@ h5 {
   border: none;
   width: 100px;
   padding: 0.5rem;
-  margin-top: 80px;
+  margin-top: 30px;
   margin-left: 160px;
   display: inline;
   background-color: rgba(224, 43, 87, 1);
