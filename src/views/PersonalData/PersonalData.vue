@@ -2,18 +2,15 @@
   <SlotForm>
     <template #Center>
       <div id="register-form">
-        <form action="#" class="form">
+        <form action="" class="form" v-on:submit.prevent="checkForm()">
           <h2 class="text-center">Dados Pessoais</h2>
           <!-- Progress bar -->
           <div class="progressbar">
-            <div class="progress" id="progress"></div>
 
             <div class="progress-step progress-step-active"></div>
             <div class="progress-step"></div>
             <div class="progress-step"></div>
-
           </div>
-
           <!-- Steps -->
           <section style="display: flex; width: 100%;">
             <div class="input-group" style="width:100%">
@@ -24,21 +21,27 @@
           <section style="display: flex; width: 100%;">
             <div class="input-group" style="width: 50%">
               <label for="email">Email</label>
-              <input type="text" name="email" id="email" placeholder="Digite seu email" />
+              <input type="text" name="email" id="email" placeholder="Digite seu email" v-model="email" required />
             </div>
             <div class="input-group" style="width: 50%">
               <label for="email">Confirmar Email</label>
-              <input type="text" name="email" id="email" placeholder="Digite seu email" />
+              <input type="text" name="email" id="email" placeholder="Digite seu email" v-model="confirmEmail"
+                required />
             </div>
+            <ul>
+              <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+            </ul>
           </section>
           <section style="display: flex; width: 100%">
             <div class="input-group" style="width: 50%">
               <label for="cpf">CPF</label>
-              <input type="text" name="cpf" id="cpf" placeholder="___.___.___-__ " />
+              <input type="text" name="cpf" id="cpf" placeholder="___.___.___-__ " v-model="maskCpf"
+                v-mask="'###.###.###-##'" />
             </div>
             <div class="input-group" style="width: 50%">
               <label for="telefone">Telefone</label>
-              <input type="text" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" />
+              <input type="text" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" v-model="maskTel"
+                v-mask="'(##) # ####-####'" />
             </div>
           </section>
           <section style="display: flex; width: 100%">
@@ -47,7 +50,6 @@
               <input type="date" id="dataNasc" name="dataNasc">
             </div>
           </section>
-
           <section style="display: flex;width: 100%">
             <div style="width: 100%">
               <label for="opcionais" id="opcionais-title">Ao finalizar, confira se os dados estão corretos</label>
@@ -60,7 +62,6 @@
               <span>Email</span>
             </div>
           </section>
-
           <section style="display: flex;width: 100%">
             <div class="checkbox-container" style="width: 100%">
               <input type="checkbox" name="opcionais" id="opcionais" v-model="opcionais" value="Whatsapp">
@@ -75,7 +76,8 @@
           </section>
           <br>
           <div class="">
-            <router-link to="/contactData"><button class="btn"> Confirmar</button></router-link>
+            <router-link to="/contactData"><button class="btn" v-on:click="checkForm();">
+                Confirmar</button></router-link>
           </div>
         </form>
       </div>
@@ -90,6 +92,31 @@ export default {
   name: 'PersonalData',
   components: {
     SlotForm,
+  },
+  data() {
+    return {
+      maskCpf: '',
+      maskTel: '',
+      email: '',
+      confirmEmail: '',
+      errors: [],
+    }
+  },
+  // validattions() {
+  //   return {
+  //     email: { required },
+  //     confirmEmail: { required }
+  //   }
+  // },
+  methods: {
+    checkForm: function () {
+      this.errors = [];
+
+      if (this.email != this.confirmEmail) {
+        return this.errors.push('Os emais estão diferentes');
+      }
+      if (this.email === this.confirmEmail);
+    }
   }
 }
 </script>
